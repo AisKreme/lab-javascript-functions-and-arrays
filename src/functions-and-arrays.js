@@ -119,8 +119,7 @@ function avg(avgArr) {
   } else {
   let avgNum = 0;
   avgNum= sum(avgArr)/avgArr.length;
-  avgNum = avgNum.toFixed(2);
-  return avgNum;
+  return avgNum.toFixed(2);
   }
 }
 
