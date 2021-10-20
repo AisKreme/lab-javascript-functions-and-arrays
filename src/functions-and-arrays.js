@@ -50,9 +50,37 @@ return arrSum;
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 
+function sum(arrAll) {
+let sum = 0;
+if (arrAll.length == 0 ){
+  return 0;
+}
+else {
+for (let i = 0 ; i < arrAll.length ; i++){
+switch (typeof arrAll[i]){
+  case "number":
+    sum += arrAll[i];
+    break;
+  case "string":
+    sum += arrAll[i].length;
+    break;
+  case "boolean":
+    if(arrAll[i] == true){
+      sum += 1;
+    } else {
+    sum += 0;
+  }
+    break;
+  default: 
+    return "Unsupported data type sir or ma'am";
+} 
+}
+return sum;
+}
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
@@ -85,9 +113,15 @@ else {
 
 
 // Bonus - Iteration #4.1
-function avg() {
-
-
+function avg(avgArr) {
+  if (avgArr.length == 0){
+    return null;
+  } else {
+  let avgNum = 0;
+  avgNum= sum(avgArr)/avgArr.length;
+  avgNum = avgNum.toFixed(2);
+  return avgNum;
+  }
 }
 
 // Iteration #5: Unique arrays
